@@ -3,9 +3,6 @@ import time
 
 servoDriver = ServoDriver()
 while True:
-	servoDriver.setAngle(90)
-	time.sleep(1)
-	servoDriver.setAngle(0)
-	time.sleep(1)
-	servoDriver.setAngle(180)
-	time.sleep(1)
+	servoDriver.smooth_move(0, 50)
+	servoDriver.smooth_move(90, 70)
+	servoDriver.smooth_move(180, 100)
